@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School of AI | Visakhapatnam</title>
+
+<meta name="description"
+      content="School of AI Visakhapatnam — AI education for students, teachers, parents and professionals.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet">
+
+<style>
+
+:root {
+  --primary:#635bff;
+  --primary-dark:#5148df;
+  --cyan:#06b6d4;
+  --navy:#080d1c;
+  --navy2:#121a31;
+  --text:#111827;
+  --muted:#697386;
+  --bg:#f6f8fc;
+  --white:#fff;
+  --border:#e7eaf1;
+
+  --shadow-sm:0 10px 35px rgba(15,23,42,.07);
+  --shadow-lg:0 30px 80px rgba(15,23,42,.13);
+
+  --radius:24px;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:"DM Sans",sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.6;
+}
+
+h1,h2,h3,h4 {
+  font-family:"Manrope",sans-serif;
+  line-height:1.15;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.container {
+  width:min(1180px,calc(100% - 40px));
+  margin:auto;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position:fixed;
+  z-index:1000;
+  top:0;
+  width:100%;
+  padding:18px 0;
+  transition:.3s;
+}
+
+.navbar.scrolled {
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:"Manrope";
+  font-weight:800;
+  font-size:19px;
+}
+
+.brand-icon {
+  width:44px;
+  height:44px;
+  border-radius:13px;
+
+  display:grid;
+  place-items:center;
+
+  color:#fff;
+
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--cyan)
+  );
+
+  box-shadow:0 10px 25px rgba(99,91,255,.28);
+}
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-links a {
+  font-size:14px;
+  font-weight:600;
+  color:#4b5563;
+}
+
+.nav-links a:hover {
+  color:var(--primary);
+}
+
+.nav-cta {
+  color:#fff!important;
+  background:var(--navy);
+  padding:11px 18px;
+  border-radius:10px;
+}
+
+.mobile-toggle {
+  display:none;
+  font-size:25px;
+  cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  padding:175px 0 110px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(99,91,255,.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(6,182,212,.13),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #f7f9ff,
+      #fff
+    );
+
+  overflow:hidden;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.status {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+
+  padding:8px 14px;
+  margin-bottom:24px;
+
+  background:#f0f1ff;
+  border:1px solid #dfe2ff;
+  border-radius:100px;
+
+  color:#5148d7;
+  font-size:12px;
+  font-weight:700;
+}
+
+.status-dot {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#22c55e;
+  box-shadow:0 0 0 5px rgba(34,197,94,.12);
+}
+
+.hero h1 {
+  font-size:clamp(45px,6vw,76px);
+  letter-spacing:-3.5px;
+  margin-bottom:25px;
+}
+
+.gradient {
+  background:linear-gradient(
+    90deg,
+    var(--primary),
+    #8b5cf6,
+    var(--cyan)
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-text {
+  max-width:600px;
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:34px;
+}
+
+.buttons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:14px 21px;
+
+  border-radius:12px;
+
+  font-size:14px;
+  font-weight:700;
+
+  transition:.25s;
+}
+
+.btn-primary {
+  color:#fff;
+  background:var(--navy);
+  box-shadow:0 12px 30px rgba(8,13,28,.16);
+}
+
+.btn-primary:hover {
+  transform:translateY(-2px);
+}
+
+.btn-outline {
+  border:1px solid #e0e5ed;
+  background:#fff;
+}
+
+.btn-outline:hover {
+  color:var(--primary);
+  border-color:var(--primary);
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+  position:relative;
+  height:500px;
+}
+
+.orb {
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  top:55px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      #fff,
+      #c9c6ff 9%,
+      #817aff 28%,
+      #635bff 50%,
+      #1c2450 75%,
+      #080d1c
+    );
+
+  box-shadow:
+    0 0 100px rgba(99,91,255,.25),
+    inset -35px -40px 80px rgba(0,0,0,.3);
+
+  animation:float 5s ease-in-out infinite;
+}
+
+.orb:before {
+  content:"";
+  position:absolute;
+  inset:30px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.3);
+}
+
+@keyframes float {
+  0%,100% {
+    transform:translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform:translateX(-50%) translateY(-15px);
+  }
+}
+
+.floating {
+  position:absolute;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:15px;
+
+  background:rgba(255,255,255,.93);
+  backdrop-filter:blur(16px);
+
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:17px;
+
+  box-shadow:var(--shadow-lg);
+
+  animation:floatCard 4s ease-in-out infinite;
+}
+
+.floating.one {
+  top:65px;
+  right:0;
+}
+
+.floating.two {
+  bottom:75px;
+  left:0;
+  animation-delay:1s;
+}
+
+.floating.three {
+  bottom:15px;
+  right:25px;
+  animation-delay:1.8s;
+}
+
+@keyframes floatCard {
+  0%,100% {
+    transform:translateY(0);
+  }
+
+  50% {
+    transform:translateY(-9px);
+  }
+}
+
+.float-icon {
+  width:42px;
+  height:42px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:12px;
+  background:#eef0ff;
+
+  font-size:20px;
+}
+
+.floating strong {
+  display:block;
+  font-size:13px;
+}
+
+.floating small {
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust {
+  padding:30px 0 75px;
+}
+
+.trust-inner {
+  border-top:1px solid var(--border);
+  padding-top:30px;
+  text-align:center;
+}
+
+.trust-label {
+  margin-bottom:24px;
+
+  color:#929aaa;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.trust-items {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:42px;
+
+  color:#7d8797;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+section {
+  padding:105px 0;
+}
+
+.section-head {
+  max-width:700px;
+  text-align:center;
+  margin:0 auto 55px;
+}
+
+.eyebrow {
+  margin-bottom:13px;
+
+  color:var(--primary);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+}
+
+.section-head h2 {
+  font-size:clamp(32px,4vw,49px);
+  letter-spacing:-1.8px;
+  margin-bottom:15px;
+}
+
+.section-head p {
+  color:var(--muted);
+}
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.programs {
+  background:var(--bg);
+}
+
+.program-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.program {
+  padding:30px;
+
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+
+  background:#fff;
+
+  transition:.3s;
+}
+
+.program:hover {
+  transform:translateY(-7px);
+  border-color:rgba(99,91,255,.2);
+  box-shadow:var(--shadow-lg);
+}
+
+.program.featured {
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(99,91,255,.35),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      #0b1020,
+      #1b2450
+    );
+}
+
+.program-number {
+  margin-bottom:25px;
+
+  color:#9ba4b8;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.program-icon {
+  width:55px;
+  height:55px;
+
+  display:grid;
+  place-items:center;
+
+  margin-bottom:23px;
+
+  border-radius:16px;
+  background:#eef0ff;
+
+  font-size:24px;
+}
+
+.featured .program-icon {
+  background:rgba(255,255,255,.1);
+}
+
+.program h3 {
+  font-size:21px;
+  margin-bottom:12px;
+}
+
+.program p {
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:24px;
+}
+
+.featured p {
+  color:#b8c0d0;
+}
+
+.program-link {
+  color:var(--primary);
+  font-size:13px;
+  font-weight:800;
+}
+
+.featured .program-link {
+  color:#aaa6ff;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:90px;
+  align-items:center;
+}
+
+.about-visual {
+  position:relative;
+
+  min-height:500px;
+
+  overflow:hidden;
+  border-radius:30px;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(255,255,255,.25),
+      transparent 20%
+    ),
+    linear-gradient(
+      145deg,
+      #5d56ed,
+      #0e7490
+    );
+}
+
+.about-visual:before {
+  content:"AI";
+
+  position:absolute;
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  color:rgba(255,255,255,.09);
+
+  font-family:"Manrope";
+  font-size:260px;
+  font-weight:800;
+}
+
+.about-card {
+  position:absolute;
+
+  left:25px;
+  right:25px;
+  bottom:25px;
+
+  padding:20px;
+
+  border-radius:17px;
+
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(15px);
+
+  box-shadow:var(--shadow-lg);
+}
+
+.about-card strong {
+  display:block;
+  margin-bottom:3px;
+}
+
+.about-card span {
+  color:var(--muted);
+  font-size:13px;
+}
+
+.about-content h2 {
+  font-size:clamp(34px,4vw,53px);
+  letter-spacing:-2px;
+  margin-bottom:22px;
+}
+
+.about-content>p {
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.values {
+  display:grid;
+  gap:17px;
+  margin-top:30px;
+}
+
+.value {
+  display:flex;
+  gap:14px;
+}
+
+.check {
+  flex-shrink:0;
+
+  width:28px;
+  height:28px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:#10b981;
+  background:#ecfdf5;
+
+  font-size:13px;
+  font-weight:900;
+}
+
+.value h4 {
+  font-size:15px;
+  margin-bottom:3px;
+}
+
+.value p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.resources {
+  background:var(--bg);
+}
+
+.resource-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.resource {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+
+  padding:24px;
+
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+
+  transition:.25s;
+}
+
+.resource:hover {
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-sm);
+  border-color:rgba(99,91,255,.2);
+}
+
+.resource-info {
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.resource-icon {
+  width:46px;
+  height:46px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:13px;
+
+  background:#eef0ff;
+
+  font-size:19px;
+}
+
+.resource h3 {
+  font-size:15px;
+  margin-bottom:3px;
+}
+
+.resource p {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.arrow {
+  width:36px;
+  height:36px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:#f5f6fa;
+
+  color:var(--primary);
+  font-weight:800;
+}
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+
+.videos {
+  background:#fff;
+}
+
+/*
+  IMPORTANT:
+  We intentionally do NOT use YouTube iframe embeds here.
+
+  YouTube Error 153 can occur depending on the way a page is
+  served, referrer/origin information and YouTube's embedding
+  restrictions.
+
+  Instead, the cards use the official YouTube thumbnail and
+  link directly to the original YouTube video.
+
+  This means there is no broken iframe and no Error 153 screen.
+*/
+
+.video-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.video-card {
+  overflow:hidden;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  box-shadow:var(--shadow-sm);
+
+  transition:.3s;
+}
+
+.video-card:hover {
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+}
+
+.video-thumbnail {
+  position:relative;
+
+  aspect-ratio:16/9;
+
+  overflow:hidden;
+
+  background:#080d1c;
+}
+
+.video-thumbnail img {
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:.45s;
+}
+
+.video-card:hover .video-thumbnail img {
+  transform:scale(1.06);
+}
+
+.video-overlay {
+  position:absolute;
+  inset:0;
+
+  display:grid;
+  place-items:center;
+
+  background:linear-gradient(
+    rgba(8,13,28,.05),
+    rgba(8,13,28,.5)
+  );
+}
+
+.play-button {
+  width:66px;
+  height:66px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:#fff;
+
+  background:#ff0000;
+
+  font-size:25px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.3);
+
+  transition:.25s;
+}
+
+.video-card:hover .play-button {
+  transform:scale(1.1);
+}
+
+.video-info {
+  padding:18px 19px 20px;
+}
+
+.video-info h3 {
+  font-size:15px;
+  margin-bottom:5px;
+}
+
+.video-info p {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.video-watch {
+  display:inline-flex;
+
+  margin-top:12px;
+
+  color:#e11d48;
+
+  font-size:12px;
+  font-weight:800;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+  background:var(--navy);
+  color:#fff;
+}
+
+.stats-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  text-align:center;
+}
+
+.stat {
+  padding:20px;
+}
+
+.stat strong {
+  display:block;
+
+  font-family:"Manrope";
+  font-size:43px;
+
+  background:linear-gradient(
+    90deg,
+    #aaa6ff,
+    #67e8f9
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.stat span {
+  color:#8e98ad;
+  font-size:13px;
+}
+
+/* =========================================================
+   FOUNDER
+========================================================= */
+
+.founder {
+  background:var(--bg);
+}
+
+.founder-box {
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:45px;
+  align-items:center;
+
+  padding:55px;
+
+  background:#fff;
+
+  border-radius:30px;
+
+  box-shadow:var(--shadow-lg);
+}
+
+.founder-photo {
+  width:220px;
+  height:220px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:25px;
+
+  color:#fff;
+
+  font-family:"Manrope";
+  font-size:60px;
+  font-weight:800;
+
+  background:linear-gradient(
+    145deg,
+    var(--primary),
+    var(--cyan)
+  );
+}
+
+.founder-content h2 {
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.founder-content p {
+  color:var(--muted);
+  max-width:700px;
+}
+
+.quote {
+  margin-top:23px;
+  padding-left:18px;
+
+  border-left:3px solid var(--primary);
+
+  color:#30394c;
+  font-weight:700;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+  padding-top:95px;
+}
+
+.contact-box {
+  padding:75px 40px;
+
+  text-align:center;
+
+  color:#fff;
+
+  border-radius:30px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(139,92,246,.5),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(6,182,212,.35),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #11172d,
+      #080d1c
+    );
+}
+
+.contact-box h2 {
+  font-size:clamp(32px,4vw,51px);
+  margin-bottom:17px;
+}
+
+.contact-box p {
+  max-width:650px;
+  margin:auto auto 30px;
+  color:#aeb6c9;
+}
+
+.contact-buttons {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.contact-buttons .btn {
+  background:#fff;
+  color:var(--navy);
+}
+
+.contact-buttons .btn.dark {
+  color:#fff;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  padding:65px 0 25px;
+  color:#fff;
+  background:#060a14;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:45px;
+
+  padding-bottom:50px;
+}
+
+.footer-brand p {
+  max-width:340px;
+  margin-top:18px;
+  color:#808a9f;
+  font-size:13px;
+}
+
+footer h4 {
+  margin-bottom:17px;
+  font-size:14px;
+}
+
+footer ul {
+  display:grid;
+  gap:10px;
+  list-style:none;
+}
+
+footer li,
+footer a {
+  color:#818b9f;
+  font-size:13px;
+}
+
+footer a:hover {
+  color:#fff;
+}
+
+.footer-bottom {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+
+  padding-top:22px;
+
+  border-top:1px solid rgba(255,255,255,.08);
+
+  color:#626d82;
+
+  font-size:11px;
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+  position:fixed;
+
+  right:22px;
+  bottom:22px;
+
+  z-index:999;
+
+  width:55px;
+  height:55px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:#fff;
+
+  background:#25d366;
+
+  font-size:23px;
+
+  box-shadow:0 12px 30px rgba(37,211,102,.3);
+
+  transition:.25s;
+}
+
+.whatsapp:hover {
+  transform:translateY(-4px) scale(1.05);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:980px) {
+
+  .nav-links {
+    display:none;
+  }
+
+  .mobile-toggle {
+    display:block;
+  }
+
+  .hero-grid,
+  .about-grid {
+    grid-template-columns:1fr;
+  }
+
+  .hero-content {
+    text-align:center;
+  }
+
+  .hero-text {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .buttons {
+    justify-content:center;
+  }
+
+  .program-grid,
+  .video-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-visual {
+    max-width:500px;
+    width:100%;
+    margin:auto;
+  }
+
+  .footer-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px) {
+
+  .container {
+    width:min(100% - 28px,1180px);
+  }
+
+  section {
+    padding:75px 0;
+  }
+
+  .hero {
+    padding-top:140px;
+  }
+
+  .hero h1 {
+    font-size:45px;
+    letter-spacing:-2px;
+  }
+
+  .hero-text {
+    font-size:16px;
+  }
+
+  .hero-visual {
+    height:390px;
+    transform:scale(.84);
+  }
+
+  .orb {
+    width:300px;
+    height:300px;
+  }
+
+  .program-grid,
+  .video-grid,
+  .resource-grid,
+  .stats-grid,
+  .footer-grid {
+    grid-template-columns:1fr;
+  }
+
+  .founder-box {
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:30px;
+  }
+
+  .founder-photo {
+    margin:auto;
+  }
+
+  .footer-bottom {
+    flex-direction:column;
+  }
+
+  .trust-items {
+    gap:18px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar" id="navbar">
+
+  <div class="container nav">
+
+    <a href="#" class="brand">
+
+      <div class="brand-icon">
+        AI
+      </div>
+
+      <span>
+        School of AI
+      </span>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="#programs">Programs</a>
+      <a href="#resources">Resources</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#founder">Founder</a>
+
+      <a href="#contact" class="nav-cta">
+        Get Started
+      </a>
+
+    </nav>
+
+
+    <div
+      class="mobile-toggle"
+      onclick="toggleMenu()"
+    >
+      ☰
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+
+    <div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        MSME Registered • Government of India
+      </div>
+
+
+      <h1>
+        Learn AI.<br>
+        <span class="gradient">
+          Shape the Future.
+        </span>
+      </h1>
+
+
+      <p class="hero-text">
+        School of AI is an educational support-services enterprise
+        dedicated to bringing the transformative power of Artificial
+        Intelligence to students, teachers and parents.
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="https://drive.google.com/file/d/1M1A9KQk9ta3bLKN6EanRVv6T1fD48TNg/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discover School of AI →
+        </a>
+
+
+        <a
+          class="btn btn-outline"
+          href="#programs"
+        >
+          Explore Programs
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="orb"></div>
+
+
+      <div class="floating one">
+
+        <div class="float-icon">
+          🧠
+        </div>
+
+        <div>
+          <strong>
+            Artificial Intelligence
+          </strong>
+
+          <small>
+            Learn • Apply • Innovate
+          </small>
+        </div>
+
+      </div>
+
+
+      <div class="floating two">
+
+        <div class="float-icon">
+          🎓
+        </div>
+
+        <div>
+          <strong>
+            Future-Ready Learning
+          </strong>
+
+          <small>
+            Students & educators
+          </small>
+        </div>
+
+      </div>
+
+
+      <div class="floating three">
+
+        <div class="float-icon">
+          🚀
+        </div>
+
+        <div>
+          <strong>
+            AI for Everyone
+          </strong>
+
+          <small>
+            Inclusive education
+          </small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     TRUST
+========================================================= -->
+
+<section class="trust">
+
+  <div class="container">
+
+    <div class="trust-inner">
+
+      <div class="trust-label">
+        Building an AI-ready community
+      </div>
+
+      <div class="trust-items">
+        <span>STUDENTS</span>
+        <span>TEACHERS</span>
+        <span>PARENTS</span>
+        <span>PROFESSIONALS</span>
+        <span>INNOVATORS</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     PROGRAMS
+========================================================= -->
+
+<section class="programs" id="programs">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Our Programs
+      </div>
+
+      <h2>
+        AI education for<br>
+        every stage of learning.
+      </h2>
+
+      <p>
+        Explore the original School of AI programs and resources,
+        directly connected to their official documents and pages.
+      </p>
+
+    </div>
+
+
+    <div class="program-grid">
+
+
+      <article class="program featured">
+
+        <div class="program-number">
+          01 / STUDENTS
+        </div>
+
+        <div class="program-icon">
+          🎓
+        </div>
+
+        <h3>
+          Learn Smart
+        </h3>
+
+        <p>
+          AI learning resources designed for students of higher
+          education.
+        </p>
+
+        <a
+          class="program-link"
+          href="https://drive.google.com/file/d/10HcrD7Bfqq58gtEhF9SzTi4j3IFr7yyC/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Learn Smart PDF →
+        </a>
+
+      </article>
+
+
+      <article class="program">
+
+        <div class="program-number">
+          02 / EDUCATORS
+        </div>
+
+        <div class="program-icon">
+          👨‍🏫
+        </div>
+
+        <h3>
+          Teach Smart
+        </h3>
+
+        <p>
+          Resources supporting teachers in understanding and using
+          AI in education.
+        </p>
+
+        <a
+          class="program-link"
+          href="https://drive.google.com/file/d/1kQo1lybp5WkwBuMrEJUkwS84R30H_8Oc/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Teach Smart PDF →
+        </a>
+
+      </article>
+
+
+      <article class="program">
+
+        <div class="program-number">
+          03 / EVERYONE
+        </div>
+
+        <div class="program-icon">
+          🌎
+        </div>
+
+        <h3>
+          AI for Everyone
+        </h3>
+
+        <p>
+          An accessible introduction to AI for learners from diverse
+          backgrounds.
+        </p>
+
+        <a
+          class="program-link"
+          href="https://drive.google.com/file/d/1sEBrDWMvXqNBBZLjz4PhmF0ptvFD_h5a/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open AI for Everyone PDF →
+        </a>
+
+      </article>
+
+
+      <article class="program">
+
+        <div class="program-number">
+          04 / TEACHERS
+        </div>
+
+        <div class="program-icon">
+          📚
+        </div>
+
+        <h3>
+          CTPDP
+        </h3>
+
+        <p>
+          Continuous Teacher Professional Development Program
+          for educators.
+        </p>
+
+        <a
+          class="program-link"
+          href="https://drive.google.com/file/d/1baKA6ju_9d1uyfk722oWB-SQcJ4RclUm/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open CTPDP PDF →
+        </a>
+
+      </article>
+
+
+      <article class="program">
+
+        <div class="program-number">
+          05 / FRAMEWORK
+        </div>
+
+        <div class="program-icon">
+          🧩
+        </div>
+
+        <h3>
+          CTPDP Framework
+        </h3>
+
+        <p>
+          Explore the course framework for the Continuous Teacher
+          Professional Development Program.
+        </p>
+
+        <a
+          class="program-link"
+          href="https://drive.google.com/file/d/1hi77dWe-1WE71ei2_FsHW8Vnb2g890xk/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Course Framework →
+        </a>
+
+      </article>
+
+
+      <article class="program">
+
+        <div class="program-number">
+          06 / DIGITAL EDUCATION
+        </div>
+
+        <div class="program-icon">
+          💻
+        </div>
+
+        <h3>
+          School of Digital Skills
+        </h3>
+
+        <p>
+          Visit the dedicated School of Digital Skills website
+          for additional learning resources.
+        </p>
+
+        <a
+          class="program-link"
+          href="https://sites.google.com/view/dizital-skills"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Digital Skills →
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+  <div class="container about-grid">
+
+
+    <div class="about-visual">
+
+      <div class="about-card">
+
+        <strong>
+          AI should ultimately serve humanity.
+        </strong>
+
+        <span>
+          Expanding access to AI education and creating an
+          inclusive future.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+      <div class="eyebrow">
+        About School of AI
+      </div>
+
+      <h2>
+        Making AI education
+        <span class="gradient">
+          accessible.
+        </span>
+      </h2>
+
+      <p>
+        School of AI is a revolutionary autonomous institute
+        dedicated to bringing the transformative power of
+        Artificial Intelligence to students, teachers and
+        parents alike.
+      </p>
+
+      <p>
+        The organisation's mission is to expand access to AI
+        education and forge an inclusive future where everyone
+        has the opportunity to shape and benefit from this
+        technology.
+      </p>
+
+
+      <div class="values">
+
+        <div class="value">
+
+          <div class="check">
+            ✓
+          </div>
+
+          <div>
+
+            <h4>
+              Accessible AI Education
+            </h4>
+
+            <p>
+              Making AI concepts approachable and useful.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="value">
+
+          <div class="check">
+            ✓
+          </div>
+
+          <div>
+
+            <h4>
+              Practical Learning
+            </h4>
+
+            <p>
+              Connecting learning with real-world application.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="value">
+
+          <div class="check">
+            ✓
+          </div>
+
+          <div>
+
+            <h4>
+              Inclusive Future
+            </h4>
+
+            <p>
+              Helping more people participate in the AI revolution.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     RESOURCES
+========================================================= -->
+
+<section class="resources" id="resources">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Resource Center
+      </div>
+
+      <h2>
+        Everything important,<br>
+        one click away.
+      </h2>
+
+      <p>
+        Direct access to the original School of AI documents,
+        applications and learning resources.
+      </p>
+
+    </div>
+
+
+    <div class="resource-grid">
+
+
+      <a
+        class="resource"
+        href="https://drive.google.com/file/d/1M1A9KQk9ta3bLKN6EanRVv6T1fD48TNg/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            🎬
+          </div>
+
+          <div>
+
+            <h3>
+              School of AI Introduction
+            </h3>
+
+            <p>
+              Official School of AI video
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://drive.google.com/file/d/10HcrD7Bfqq58gtEhF9SzTi4j3IFr7yyC/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            📘
+          </div>
+
+          <div>
+
+            <h3>
+              Learn Smart
+            </h3>
+
+            <p>
+              Student learning document
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://app.toughtongueai.com/run/the-legal-advisor--6809dce204d84fa96b14c916"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            ⚖️
+          </div>
+
+          <div>
+
+            <h3>
+              The Legal Advisor
+            </h3>
+
+            <p>
+              Open the AI legal advisor
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://drive.google.com/file/d/1sEBrDWMvXqNBBZLjz4PhmF0ptvFD_h5a/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            🌐
+          </div>
+
+          <div>
+
+            <h3>
+              AI for Everyone
+            </h3>
+
+            <p>
+              AI awareness and learning resource
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://drive.google.com/file/d/1kQo1lybp5WkwBuMrEJUkwS84R30H_8Oc/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            👨‍🏫
+          </div>
+
+          <div>
+
+            <h3>
+              Teach Smart
+            </h3>
+
+            <p>
+              Teacher education resource
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://drive.google.com/file/d/1baKA6ju_9d1uyfk722oWB-SQcJ4RclUm/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            📚
+          </div>
+
+          <div>
+
+            <h3>
+              CTPDP
+            </h3>
+
+            <p>
+              Teacher professional development
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://drive.google.com/file/d/1hi77dWe-1WE71ei2_FsHW8Vnb2g890xk/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            🧩
+          </div>
+
+          <div>
+
+            <h3>
+              CTPDP Course Framework
+            </h3>
+
+            <p>
+              Official course framework
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+      <a
+        class="resource"
+        href="https://sites.google.com/view/dizital-skills"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="resource-info">
+
+          <div class="resource-icon">
+            💻
+          </div>
+
+          <div>
+
+            <h3>
+              School of Digital Skills
+            </h3>
+
+            <p>
+              Visit the dedicated website
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     VIDEOS
+========================================================= -->
+
+<section class="videos" id="videos">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Watch & Learn
+      </div>
+
+      <h2>
+        Explore School of AI
+        through video.
+      </h2>
+
+      <p>
+        Watch the original School of AI videos directly on YouTube.
+      </p>
+
+    </div>
+
+
+    <div class="video-grid" id="videoGrid">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     STATS
+========================================================= -->
+
+<section class="stats">
+
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong>AI</strong>
+      <span>Focused Education</span>
+    </div>
+
+    <div class="stat">
+      <strong>360°</strong>
+      <span>Learning Ecosystem</span>
+    </div>
+
+    <div class="stat">
+      <strong>∞</strong>
+      <span>Possibilities</span>
+    </div>
+
+    <div class="stat">
+      <strong>1</strong>
+      <span>Mission — Serve Humanity</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     FOUNDER
+========================================================= -->
+
+<section class="founder" id="founder">
+
+  <div class="container">
+
+    <div class="founder-box">
+
+      <div class="founder-photo">
+        GR
+      </div>
+
+
+      <div class="founder-content">
+
+        <div class="eyebrow">
+          Founder
+        </div>
+
+        <h2>
+          Gupteswar Rao
+        </h2>
+
+        <p>
+          Founder of School of AI, dedicated to expanding access
+          to Artificial Intelligence education and creating an
+          inclusive ecosystem where people can learn, understand
+          and benefit from AI.
+        </p>
+
+        <div class="quote">
+
+          “Learning is the key to innovation.<br>
+          Innovation is the key to change.<br>
+          Change is the key to success.”
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <h2>
+        Ready to become<br>
+        AI ready?
+      </h2>
+
+      <p>
+        Connect with School of AI Visakhapatnam and explore
+        opportunities for AI learning, teacher development and
+        digital skills.
+      </p>
+
+
+      <div class="contact-buttons">
+
+        <a
+          class="btn"
+          href="mailto:schoolofaivizag@gmail.com"
+        >
+          ✉ schoolofaivizag@gmail.com
+        </a>
+
+
+        <a
+          class="btn dark"
+          href="tel:+917675836334"
+        >
+          ☎ +91 76758 36334
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a href="#" class="brand">
+
+          <div class="brand-icon">
+            AI
+          </div>
+
+          <span>
+            School of AI
+          </span>
+
+        </a>
+
+        <p>
+          An Educational Support Services Enterprise dedicated
+          to expanding access to Artificial Intelligence education.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Programs
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="#programs">
+              Learn Smart
+            </a>
+          </li>
+
+          <li>
+            <a href="#programs">
+              Teach Smart
+            </a>
+          </li>
+
+          <li>
+            <a href="#programs">
+              AI for Everyone
+            </a>
+          </li>
+
+          <li>
+            <a href="#programs">
+              CTPDP
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Resources
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="#resources">
+              Resource Center
+            </a>
+          </li>
+
+          <li>
+            <a href="#videos">
+              Videos
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://sites.google.com/view/dizital-skills"
+              target="_blank"
+            >
+              Digital Skills
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://app.toughtongueai.com/run/the-legal-advisor--6809dce204d84fa96b14c916"
+              target="_blank"
+            >
+              Legal Advisor
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <ul>
+
+          <li>
+            Visakhapatnam, India
+          </li>
+
+          <li>
+            <a href="tel:+918985288290">
+              +91 89852 88290
+            </a>
+          </li>
+
+          <li>
+            <a href="tel:+917675836334">
+              +91 76758 36334
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:schoolofaivizag@gmail.com">
+              schoolofaivizag@gmail.com
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:bgrao123@gmail.com">
+              bgrao123@gmail.com
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 School of AI. All rights reserved.
+      </span>
+
+      <span>
+        MSME Registered • Recognised by Government of India
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ========================================================
+     WHATSAPP
+========================================================= -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/918985288290"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  ☎
+</a>
+
+
+<script>
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+const navbar =
+  document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 40) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+  const links =
+    document.querySelector(".nav-links");
+
+  if (links.style.display === "flex") {
+
+    links.style.display = "";
+
+    return;
+  }
+
+  links.style.display = "flex";
+
+  links.style.position = "absolute";
+  links.style.top = "75px";
+  links.style.left = "14px";
+  links.style.right = "14px";
+
+  links.style.flexDirection = "column";
+
+  links.style.padding = "22px";
+
+  links.style.background = "#fff";
+
+  links.style.borderRadius = "18px";
+
+  links.style.boxShadow =
+    "0 25px 60px rgba(15,23,42,.15)";
+
+}
+
+
+/* =========================================================
+   YOUTUBE VIDEOS
+=========================================================
+
+   We use the official YouTube thumbnail endpoint.
+
+   The user clicks the card and goes directly to YouTube.
+
+   This completely avoids YouTube Error 153 caused by
+   embedded-player requests.
+
+========================================================= */
+
+const videos = [
+
+  {
+    id:"6uTzfkuBAV8",
+    title:"School of AI — Video 01",
+    description:"Explore the School of AI."
+  },
+
+  {
+    id:"Tk99qecLC_I",
+    title:"School of AI — Video 02",
+    description:"AI learning and education."
+  },
+
+  {
+    id:"E473b5ryrlQ",
+    title:"School of AI — Video 03",
+    description:"Discover more about AI."
+  },
+
+  {
+    id:"xxVsgX3dlJ0",
+    title:"School of AI — Video 04",
+    description:"AI education and innovation."
+  },
+
+  {
+    id:"7upv8tYUG0s",
+    title:"School of AI — Video 05",
+    description:"Learning for the AI era."
+  },
+
+  {
+    id:"KU2WhCErYyE",
+    title:"School of AI — Video 06",
+    description:"Building an AI-ready future."
+  }
+
+];
+
+
+const videoGrid =
+  document.getElementById("videoGrid");
+
+
+videos.forEach(video => {
+
+  const card =
+    document.createElement("article");
+
+  card.className = "video-card";
+
+
+  card.innerHTML = `
+
+    <a
+      href="https://www.youtube.com/watch?v=${video.id}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Watch ${video.title} on YouTube"
+    >
+
+      <div class="video-thumbnail">
+
+        <img
+          src="https://i.ytimg.com/vi/${video.id}/hqdefault.jpg"
+          alt="${video.title}"
+          loading="lazy"
+        >
+
+        <div class="video-overlay">
+
+          <div class="play-button">
+            ▶
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="video-info">
+
+        <h3>
+          ${video.title}
+        </h3>
+
+        <p>
+          ${video.description}
+        </p>
+
+        <span class="video-watch">
+          Watch on YouTube ↗
+        </span>
+
+      </div>
+
+    </a>
+
+  `;
+
+
+  videoGrid.appendChild(card);
+
+});
+
+
+/* =========================================================
+   CLOSE MOBILE MENU WHEN LINK IS CLICKED
+========================================================= */
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      if (window.innerWidth <= 980) {
+
+        document.querySelector(
+          ".nav-links"
+        ).style.display = "";
+
+      }
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
