@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 1857 Museum of Perspectives | School of AI</title>
+<style>
+:root{--ink:#17324d;--paper:#f5efe2;--card:#fffaf0;--gold:#c6923d;--red:#8e3b32;--teal:#2f6e68;--muted:#5d6c79;--line:#ddcfb6}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+header{background:var(--ink);color:#fffaf0;border-bottom:8px solid var(--gold);padding:34px 18px 30px}
+.wrap{max-width:1120px;margin:auto}.eyebrow{font:700 .78rem Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:#f1c77d}
+h1{font-size:clamp(2.2rem,6vw,4.8rem);line-height:.98;margin:12px 0 15px;max-width:900px}
+header p{font-size:1.1rem;max-width:760px;margin:0;color:#f1e9db}
+main{max-width:1120px;margin:24px auto;padding:0 16px 30px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 5px 18px #17324d0c;margin-bottom:18px}
+h2{font-size:1.65rem;margin:0 0 10px}h3{margin:0 0 8px;font-size:1.25rem}
+.small{font: .9rem/1.5 Arial,sans-serif;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:#fffdf7;border:1px solid var(--line);border-radius:9px;padding:10px}.stat span{display:block;font: .8rem Arial,sans-serif;color:var(--muted)}.stat strong{font:700 1.35rem Arial,sans-serif}
+.progress{height:9px;background:#e3d8c5;border-radius:99px;overflow:hidden;margin:13px 0}.progress span{display:block;height:100%;width:0;background:var(--teal);transition:width .25s}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+button{font:700 .95rem Arial,sans-serif;border:1px solid #b9c4ca;border-radius:9px;padding:11px 14px;background:#fffdf7;color:var(--ink);cursor:pointer}
+button:hover{filter:brightness(.97)}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #e0ac4f;outline-offset:2px}
+button.primary{background:var(--ink);color:white;border-color:var(--ink)}button.selected{background:#e4eee8;border-color:var(--teal)}button:disabled{opacity:.65;cursor:default}
+.gallery{display:none}.gallery.active{display:block}.gallery-head{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.art{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#e9deca}.art svg{display:block;width:100%;height:auto;max-height:300px}
+.tag{display:inline-block;border-radius:99px;padding:4px 9px;font:700 .75rem Arial,sans-serif;background:#e8dfcd;color:#54452f;margin:3px 4px 3px 0}
+.notice{border-left:4px solid var(--gold);padding:9px 13px;background:#f7f0df;margin:12px 0;font: .93rem/1.5 Arial,sans-serif}
+.question{border-top:1px solid var(--line);margin-top:18px;padding-top:17px}.options{display:grid;gap:8px;margin:12px 0}.options button{text-align:left;font-weight:400;line-height:1.4}
+.feedback{display:none;padding:12px;border-radius:9px;margin-top:10px;font: .95rem/1.5 Arial,sans-serif}.feedback.show{display:block}.feedback.good{background:#e4f1e8;border:1px solid #a8cbb1}.feedback.try{background:#f8e8e4;border:1px solid #dbb0a7}
+.reflection{width:100%;min-height:85px;border:1px solid var(--line);border-radius:8px;padding:11px;font:1rem/1.5 Arial,sans-serif;background:#fffdf7}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+#final{display:none}.rubric{background:#f7f0df;border:1px solid var(--line);padding:13px;border-radius:9px;margin:12px 0}
+footer{text-align:center;color:var(--muted);font: .82rem Arial,sans-serif;padding:20px}
+@media(max-width:760px){.grid2,.gallery-head{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat strong{font-size:1.15rem}header{padding-top:25px}.panel{padding:15px}}
+@media print{body{background:white}.actions,nav,button{display:none!important}.gallery{display:block!important;break-inside:avoid}.panel{box-shadow:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="eyebrow">School of AI · Historical Interpretation Studio</div>
+<h1>THE 1857<br>MUSEUM OF PERSPECTIVES</h1>
+<p><em>Rebels &amp; the Raj: The Revolt of 1857 and Its Representations</em><br>
+Step into a museum where images tell stories—but every story has a point of view. Your task is to investigate what an image shows, what it leaves out, and how it may shape memory.</p>
+</div></header>
+<main>
+<section class="grid2">
+<div class="panel">
+<h2>Welcome, curators!</h2>
+<p>You are preparing a museum exhibition about the Revolt of 1857. Explore four galleries, read the historical context, study each <strong>interpretive illustration</strong>, and answer the curator’s question.</p>
+<div class="notice"><strong>Important:</strong> The artworks below are newly made teaching illustrations, not reproductions of the original historical paintings or cartoons. Use the accompanying source notes for the historical interpretation.</div>
+<p class="small">Source boundary: This activity is based on the NCERT chapter <em>“Rebels and the Raj: The Revolt of 1857 and Its Representations,”</em> especially section 5, “Images of the Revolt.” It distinguishes what the textbook says from what you infer.</p>
+</div>
+<div class="panel">
+<h2>Exhibition record</h2>
+<div class="stats">
+<div class="stat"><span>Score</span><strong id="score">0 / 80</strong></div>
+<div class="stat"><span>Galleries</span><strong id="solved">0 / 4</strong></div>
+<div class="stat"><span>Hints</span><strong id="hints">0</strong></div>
+</div>
+<div class="progress"><span id="bar"></span></div>
+<p class="small" id="status">Open Gallery 1 to begin. Each gallery can earn up to 20 points.</p>
+</div>
+</section>
+<nav aria-label="Museum galleries">
+<button class="primary selected" data-gallery="0">Gallery 1 · Victory</button>
+<button data-gallery="1">Gallery 2 · Memory & emotion</button>
+<button data-gallery="2">Gallery 3 · Revenge</button>
+<button data-gallery="3">Gallery 4 · National memory</button>
+<button id="showFinal">Curator’s final panel</button>
+</nav>
+
+<section class="gallery active" id="g0">
+<div class="panel">
+<div class="gallery-head">
+<div>
+<span class="tag">GALLERY 1</span><span class="tag">British viewpoint</span>
+<h2>Relief of Lucknow</h2>
+<p><strong>Historical source:</strong> Thomas Jones Barker’s painting, <em>Relief of Lucknow</em> (1859).</p>
+<p>During the siege of Lucknow, British forces arrived to reinforce the Residency. The textbook explains that Barker placed British commanders Campbell, Outram and Havelock at the centre, with gestures directing the viewer’s attention towards them. The damaged Residency and the dead and injured appear in the scene.</p>
+<p class="small">Observe the teaching illustration, then compare it with the source note. It is a simplified visual aid, not the original painting.</p>
+</div>
+<div class="art" role="img" aria-label="Teaching illustration showing commanders in the centre, damaged buildings behind, and shadowed foreground">
+<svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="330" fill="#d8c5a3"/><rect y="0" width="560" height="145" fill="#d1b88c"/><path d="M0 140L70 110 110 133 180 95 235 132 290 101 350 137 410 94 470 127 560 104V210H0Z" fill="#a28a6b"/><path d="M50 88h110v83H50z" fill="#8c765d"/><path d="M50 88l55-34 55 34" fill="#6f5a47"/><rect x="73" y="113" width="23" height="37" fill="#473d34"/><rect x="118" y="113" width="23" height="37" fill="#473d34"/><path d="M0 218L560 198V330H0Z" fill="#655c4c"/><g stroke="#473d34" stroke-width="3"><path d="M280 145v80M345 145v80M410 145v80"/></g><g><path d="M258 166l24-29 24 29v54h-48z" fill="#f2ead7" stroke="#473d34" stroke-width="2"/><circle cx="282" cy="128" r="13" fill="#c18d66"/><path d="M269 122q12-23 26 0" fill="#403b36"/><path d="M330 166l22-28 22 28v54h-44z" fill="#e9dfca" stroke="#473d34" stroke-width="2"/><circle cx="352" cy="128" r="13" fill="#b87e59"/><path d="M339 122q12-23 26 0" fill="#403b36"/><path d="M394 166l22-28 22 28v54h-44z" fill="#f2ead7" stroke="#473d34" stroke-width="2"/><circle cx="416" cy="128" r="13" fill="#c18d66"/><path d="M403 122q12-23 26 0" fill="#403b36"/></g><path d="M0 262q95-40 180 0t190 0t190 0v68H0Z" fill="#3e3a35"/><path d="M60 258l32-13 18 12-28 15zM455 270l35-14 22 10-28 18z" fill="#d3c4a9"/><text x="18" y="26" font-family="Arial" font-size="13" fill="#473d34" font-weight="bold">TEACHING ILLUSTRATION</text></svg>
+</div>
+</div>
+<div class="question">
+<h3>Curator’s question</h3>
+<p>Which interpretation is best supported by the textbook’s description of Barker’s painting?</p>
+<div class="options" data-question="0">
+<button data-correct="false">A. It presents all groups involved in the siege equally.</button>
+<button data-correct="true">B. It directs attention to British commanders and presents the event as a British recovery of control.</button>
+<button data-correct="false">C. It was painted by a rebel artist to celebrate the victory of the rebels.</button>
+<button data-correct="false">D. It proves that every person in Lucknow shared the same opinion.</button>
+</div>
+<div class="feedback" id="fb0" aria-live="polite"></div>
+<div class="actions"><button class="hint" data-hint="0">Reveal a hint</button><button class="primary next" data-next="1">Visit Gallery 2 →</button></div>
+<div class="notice"><strong>Think deeper:</strong> What does placing a person at the centre of a picture encourage viewers to notice first?</div>
+<textarea class="reflection" id="r0" placeholder="Optional: Write one sentence about what the painting highlights or leaves out."></textarea>
+</div>
+</div>
+</section>
+
+<section class="gallery" id="g1">
+<div class="panel">
+<div class="gallery-head">
+<div>
+<span class="tag">GALLERY 2</span><span class="tag">Emotion & persuasion</span>
+<h2>In Memoriam</h2>
+<p><strong>Historical source:</strong> Joseph Noel Paton’s <em>In Memoriam</em> (1859).</p>
+<p>The textbook describes English women and children gathered in a circle, appearing helpless, while rescue forces arrive in the background. The rebels are not visible. The image suggests threatened violence rather than showing it directly, encouraging viewers to imagine danger and feel anger.</p>
+<p class="small">The illustration below is a respectful schematic for discussing composition, not a reconstruction of the original artwork.</p>
+</div>
+<div class="art" role="img" aria-label="Schematic illustration of a group in the foreground and distant rescuers approaching">
+<svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="330" fill="#e8dcc8"/><rect width="560" height="175" fill="#d4d0c3"/><path d="M0 175L80 140 140 166 225 127 310 168 400 135 490 165 560 145V230H0Z" fill="#a8a49a"/><path d="M350 125h150v85H350z" fill="#8a8378"/><path d="M350 125l75-43 75 43" fill="#71685d"/><rect x="390" y="152" width="22" height="40" fill="#413c36"/><rect x="437" y="152" width="22" height="40" fill="#413c36"/><path d="M0 224q150-32 280 0t280 0v106H0Z" fill="#b8a68b"/><g fill="#d9c8ae" stroke="#64584c" stroke-width="2"><circle cx="130" cy="205" r="17"/><path d="M103 225q27-18 54 0v62h-54z"/><circle cx="185" cy="212" r="15"/><path d="M162 229q23-15 46 0v53h-46z"/><circle cx="230" cy="203" r="18"/><path d="M203 225q27-18 54 0v62h-54z"/></g><g fill="#51483e"><circle cx="395" cy="209" r="11"/><path d="M380 223h30v42h-30z"/><circle cx="435" cy="209" r="11"/><path d="M420 223h30v42h-30z"/><circle cx="475" cy="209" r="11"/><path d="M460 223h30v42h-30z"/></g><path d="M270 252q35-15 70 0" stroke="#7c3f32" stroke-width="3" fill="none" stroke-dasharray="5 6"/><text x="18" y="26" font-family="Arial" font-size="13" fill="#473d34" font-weight="bold">TEACHING ILLUSTRATION</text></svg>
+</div>
+</div>
+<div class="question">
+<h3>Curator’s question</h3>
+<p>Why can an image that suggests violence without showing the attackers still influence its audience?</p>
+<div class="options" data-question="1">
+<button data-correct="false">A. Viewers can know exactly what happened because the image records every detail.</button>
+<button data-correct="true">B. It invites viewers to imagine the threat, creating emotion even though the rebels remain unseen.</button>
+<button data-correct="false">C. It shows that no British audience reacted emotionally to the revolt.</button>
+<button data-correct="false">D. It provides the rebels’ own written account of their actions.</button>
+</div>
+<div class="feedback" id="fb1" aria-live="polite"></div>
+<div class="actions"><button class="hint" data-hint="1">Reveal a hint</button><button class="primary next" data-next="2">Visit Gallery 3 →</button></div>
+<div class="notice"><strong>Think deeper:</strong> Whose feelings are made visible? Whose actions or motives are left outside the frame?</div>
+<textarea class="reflection" id="r1" placeholder="Optional: Write one sentence about how an image can shape feelings."></textarea>
+</div>
+</div>
+</section>
+
+<section class="gallery" id="g2">
+<div class="panel">
+<div class="gallery-head">
+<div>
+<span class="tag">GALLERY 3</span><span class="tag">Cartoon & politics</span>
+<h2>Justice—or vengeance?</h2>
+<p><strong>Historical source:</strong> The <em>Punch</em> cartoon “Justice,” published on 12 September 1857.</p>
+<p>The textbook describes a forceful female figure representing Justice, holding a sword and shield and trampling sepoys, while Indian women and children cower. Its caption refers to the reported massacre at Cawnpore (Kanpur) and the anger and desire for revenge in England.</p>
+<p class="small">This teaching illustration uses symbols to invite analysis; it is not the original cartoon.</p>
+</div>
+<div class="art" role="img" aria-label="Symbolic teaching illustration of scales, sword, shield, and a dramatic shadow">
+<svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="330" fill="#efe4d0"/><rect width="560" height="330" fill="#d8c6a7" opacity=".35"/><path d="M280 58v205M215 86h130M280 58l-14 20h28z" stroke="#4e4035" stroke-width="8" fill="none"/><path d="M220 87l-50 70h100zM340 87l-50 70h100z" fill="#bd9c62" stroke="#4e4035" stroke-width="4"/><path d="M155 160h130M275 160h130" stroke="#4e4035" stroke-width="5"/><path d="M240 265h80l-20 20h-40z" fill="#4e4035"/><path d="M380 68l75 145" stroke="#8e3b32" stroke-width="12" stroke-linecap="round"/><path d="M455 213l-12-33 29 14z" fill="#8e3b32"/><path d="M90 240q55-45 110 0v35H90zM365 240q55-45 110 0v35H365z" fill="#8e3b32" opacity=".75"/><circle cx="115" cy="220" r="13" fill="#75604d"/><circle cx="150" cy="225" r="11" fill="#75604d"/><circle cx="390" cy="220" r="13" fill="#75604d"/><circle cx="425" cy="225" r="11" fill="#75604d"/><text x="18" y="26" font-family="Arial" font-size="13" fill="#473d34" font-weight="bold">TEACHING ILLUSTRATION</text></svg>
+</div>
+</div>
+<div class="question">
+<h3>Curator’s question</h3>
+<p>What does the textbook’s analysis suggest about the cartoon’s message?</p>
+<div class="options" data-question="2">
+<button data-correct="false">A. It argues that British officials should avoid any response to the revolt.</button>
+<button data-correct="false">B. It offers a neutral photograph of the event with no emotional message.</button>
+<button data-correct="true">C. It presents punitive violence as justice and reflects a public mood demanding revenge.</button>
+<button data-correct="false">D. It was created as a nationalist celebration of Rani Lakshmi Bai.</button>
+</div>
+<div class="feedback" id="fb2" aria-live="polite"></div>
+<div class="actions"><button class="hint" data-hint="2">Reveal a hint</button><button class="primary next" data-next="3">Visit Gallery 4 →</button></div>
+<div class="notice"><strong>Think deeper:</strong> When a cartoon labels revenge as “justice,” what idea might the audience be encouraged to accept?</div>
+<textarea class="reflection" id="r2" placeholder="Optional: Write one sentence about the difference between justice and revenge in this image."></textarea>
+</div>
+</div>
+</section>
+
+<section class="gallery" id="g3">
+<div class="panel">
+<div class="gallery-head">
+<div>
+<span class="tag">GALLERY 4</span><span class="tag">Nationalist memory</span>
+<h2>Rani Lakshmi Bai: a remembered hero</h2>
+<p><strong>Historical source:</strong> Nationalist images, poems and later popular representations of Rani Lakshmi Bai.</p>
+<p>The textbook explains that twentieth-century nationalist imagination celebrated the revolt as a struggle against imperial rule. Rani Lakshmi Bai was often shown in armour, carrying a sword and riding a horse—a symbol of courage and resistance. Such images helped keep the revolt alive in public memory.</p>
+<p class="small">This is an original symbolic illustration, not a portrait of the historical Rani and not a reproduction of a specific poster.</p>
+</div>
+<div class="art" role="img" aria-label="Stylised symbolic image of a mounted warrior silhouette against a sunrise">
+<svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="330" fill="#f0d7a2"/><circle cx="420" cy="95" r="60" fill="#d89a49"/><path d="M0 230q100-75 210 0t200 0t150-15v115H0z" fill="#b87b4e"/><path d="M0 270q140-60 270 0t290-8v68H0z" fill="#6c7153"/><g fill="#263b4b"><path d="M150 206q30-38 78-20l44 12 38-16 38 13-18 24-60 2-24 31-65-1-37-17z"/><path d="M184 181l-13-35 13-29 23 8 8 29-9 24z"/><path d="M195 121l-15-18 25-4 14 17z"/><path d="M205 139l34-18 17 5-34 29z"/><path d="M227 126l5-48 8-2 5 52z" fill="#8e3b32"/><path d="M235 78l-4-10 8-9 5 10z" fill="#8e3b32"/><path d="M168 218l-30 53 13 4 39-42M241 223l25 45 13-4-11-53" fill="#263b4b"/><path d="M285 194l26 29 19-4-23-39z" fill="#263b4b"/><path d="M158 185l-30 20 4 8 42-10" fill="#263b4b"/></g><path d="M0 312h560" stroke="#c6923d" stroke-width="8"/><text x="18" y="26" font-family="Arial" font-size="13" fill="#473d34" font-weight="bold">TEACHING ILLUSTRATION</text></svg>
+</div>
+</div>
+<div class="question">
+<h3>Curator’s question</h3>
+<p>What is the strongest historical conclusion about nationalist images of Rani Lakshmi Bai?</p>
+<div class="options" data-question="3">
+<button data-correct="false">A. Every image of the Rani was made during the revolt itself.</button>
+<button data-correct="true">B. Later images and poems shaped how people remembered the revolt and its leaders.</button>
+<button data-correct="false">C. The textbook says pictures have no influence on public memory.</button>
+<button data-correct="false">D. The images prove that all Indians experienced 1857 in exactly the same way.</button>
+</div>
+<div class="feedback" id="fb3" aria-live="polite"></div>
+<div class="actions"><button class="hint" data-hint="3">Reveal a hint</button><button class="primary next" data-next="final">Prepare final panel →</button></div>
+<div class="notice"><strong>Think deeper:</strong> How can a later image tell us about the time it was created as well as the event it remembers?</div>
+<textarea class="reflection" id="r3" placeholder="Optional: Write one sentence about how a hero’s image can shape national memory."></textarea>
+</div>
+</div>
+</section>
+
+<section id="final" class="panel">
+<span class="tag">FINAL EXHIBITION</span>
+<h2>1857: The Event, the Image, the Memory</h2>
+<p>Your museum now needs a short curator’s statement. Select the best overall conclusion, then draft your own statement using evidence from at least two galleries.</p>
+<div class="question">
+<h3>Which statement best summarises the lesson of this museum?</h3>
+<div class="options" id="finalOptions">
+<button data-correct="false">A. Historical images always show the whole truth and need no interpretation.</button>
+<button data-correct="true">B. Images are evidence about events and also about the feelings, viewpoints and memories of the people who made and viewed them.</button>
+<button data-correct="false">C. Only one viewpoint can be used to understand the revolt.</button>
+<button data-correct="false">D. A picture is useful only if it has no emotion or symbolism.</button>
+</div>
+<div class="feedback" id="fbFinal" aria-live="polite"></div>
+</div>
+<h3>Curator’s statement</h3>
+<p class="small">Use these prompts: What does one image highlight? What does another image encourage viewers to feel? How did nationalist images shape later memory?</p>
+<textarea class="reflection" id="statement" placeholder="Our exhibition shows that images of 1857..."></textarea>
+<div class="rubric"><strong>Self-check before you finish</strong><br>□ I refer to evidence from at least two galleries.<br>□ I distinguish what an image shows from what it suggests.<br>□ I identify a viewpoint or intended emotion.<br>□ I avoid claiming that one image tells the whole story.</div>
+<div class="actions"><button class="primary" id="finish">Complete exhibition</button><button id="print">Print / Save as PDF</button><button id="restart">Restart game</button></div>
+<div class="feedback" id="result"></div>
+<div class="notice"><strong>Teacher extension:</strong> Ask pairs to curate the same image for two different audiences. They must explain how the title, caption and chosen details change the visitor’s interpretation. Remind students that a persuasive image is still a source to question, not simply accept.</div>
+</section>
+<section class="panel">
+<h2>Learning outcomes</h2>
+<p>By completing this museum, students practise visual literacy, evidence-based inference, perspective-taking, source evaluation and historical argument. Teachers can use the galleries for group discussion, formative assessment or a short written response.</p>
+<p class="small"><strong>Suggested classroom use:</strong> 25–40 minutes. Students can work individually or in pairs. Answers and scores are handled in the browser; this page does not send student responses to a server.</p>
+<p class="small">Created for learning by School of AI. Historical content is based on NCERT, <em>Themes in Indian History – Part III</em>, chapter “Rebels and the Raj,” section “Images of the Revolt.”</p>
+</section>
+</main>
+<footer>School of AI · Historical Interpretation Studio · Learn to question images, not just look at them.</footer>
+<script>
+const correctFeedback=[
+"Correct. The textbook describes the painting as centring British commanders and presenting the relief as the restoration of British control. The composition supports a particular viewpoint.",
+"Correct. The image suggests violence while leaving the rebels unseen; the viewer is invited to imagine the threat. That emotional effect is part of the source’s meaning.",
+"Correct. The cartoon links “Justice” with punishment and reflects anger and demands for revenge in Britain. Its message is political, not neutral.",
+"Correct. Nationalist images and poems created a heroic memory of the revolt and helped shape later ideas about resistance and the nation."
+];
+const hints=[
+"Look for the people placed at the centre and the sense of victory described in the source note.",
+"Notice that the threatening figures are invisible, while the audience is encouraged to imagine what might happen.",
+"The caption mentions anger and revenge. Ask whether the image presents punishment as fair, necessary, or both.",
+"The textbook says these images were part of twentieth-century nationalist imagination—not all made in 1857."
+];
+let score=0, solved=new Set(), usedHints=0, answered=new Set(), finalAnswered=false;
+const maxScore=100;
+function update(){document.getElementById('score').textContent=score+' / '+maxScore;document.getElementById('solved').textContent=solved.size+' / 4';document.getElementById('hints').textContent=usedHints;document.getElementById('bar').style.width=(solved.size/4*100)+'%';document.getElementById('status').textContent=solved.size===4?'All four galleries explored. Prepare your final exhibition panel.':'Explore each gallery and use the evidence to support your interpretation.'}
+function showGallery(n){document.querySelectorAll('.gallery').forEach((g,i)=>g.classList.toggle('active',String(i)===String(n)));document.getElementById('final').style.display=n==='final'?'block':'none';document.querySelectorAll('[data-gallery]').forEach(b=>b.classList.toggle('selected',b.dataset.gallery===String(n)));if(n==='final')document.getElementById('final').scrollIntoView({behavior:'smooth',block:'start'});else document.getElementById('g'+n).scrollIntoView({behavior:'smooth',block:'start'})}
+document.querySelectorAll('[data-gallery]').forEach(b=>b.addEventListener('click',()=>showGallery(b.dataset.gallery)));
+document.getElementById('showFinal').addEventListener('click',()=>showGallery('final'));
+document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>showGallery(b.dataset.next==='final'?'final':b.dataset.next)));
+document.querySelectorAll('.options[data-question]').forEach(group=>{
+ const q=Number(group.dataset.question);
+ group.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+  if(answered.has(q))return;
+  const good=btn.dataset.correct==='true';const fb=document.getElementById('fb'+q);fb.className='feedback show '+(good?'good':'try');
+  fb.textContent=good?correctFeedback[q]:'Not quite. Re-read the source note and try to identify what the image encourages its audience to think or feel.';
+  if(good){score+=20;solved.add(q);answered.add(q);group.querySelectorAll('button').forEach(x=>{x.disabled=true;if(x.dataset.correct==='true')x.classList.add('selected')});}
+  update();
+ }));
+});
+document.querySelectorAll('.hint').forEach(b=>b.addEventListener('click',()=>{const q=Number(b.dataset.hint);if(!b.dataset.used){usedHints++;b.dataset.used='1';}const fb=document.getElementById('fb'+q);fb.className='feedback show';fb.textContent='Hint: '+hints[q];update()}));
+document.querySelectorAll('#finalOptions button').forEach(btn=>btn.addEventListener('click',()=>{if(finalAnswered)return;const good=btn.dataset.correct==='true';const fb=document.getElementById('fbFinal');fb.className='feedback show '+(good?'good':'try');fb.textContent=good?'Correct. Images can be sources about the past and evidence of the viewpoints and emotions of the people who made, circulated and viewed them.':'Try again. The museum asks you to study both the event represented and the perspective shaping that representation.';if(good){finalAnswered=true;score+=20;document.querySelectorAll('#finalOptions button').forEach(x=>{x.disabled=true;if(x.dataset.correct==='true')x.classList.add('selected')});}update()}));
+document.getElementById('finish').addEventListener('click',()=>{const text=document.getElementById('statement').value.trim();const result=document.getElementById('result');result.className='feedback show '+(text.length>25?'good':'try');result.textContent=text.length>25?'Exhibition completed. Your curator’s statement is ready for discussion or printing. Remember: the score checks selected answers; your written statement should be assessed for evidence and reasoning.':'Please write a few sentences in your curator’s statement first. Mention at least two galleries and explain how the images present different perspectives.';if(text.length>25){result.textContent+=' Your game score is '+score+' / '+maxScore+'.'}});
+document.getElementById('print').addEventListener('click',()=>window.print());
+document.getElementById('restart').addEventListener('click',()=>{if(!confirm('Restart the museum and clear your answers on this page?'))return;score=0;solved=new Set();usedHints=0;answered=new Set();finalAnswered=false;document.querySelectorAll('.options button').forEach(b=>{b.disabled=false;b.classList.remove('selected')});document.querySelectorAll('.feedback').forEach(f=>{f.className='feedback';f.textContent=''});document.querySelectorAll('.hint').forEach(b=>delete b.dataset.used);document.querySelectorAll('textarea').forEach(t=>t.value='');update();showGallery(0)});
+update();
+</script>
+</body>
+</html>
